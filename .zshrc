@@ -40,7 +40,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 alias ls="ls -h --color=auto"
 alias ll="ls -lh --color=auto"
-alias 1password="wine 'C:\\Program Files\\1Password\\1Password.exe'"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-. ~/nvm/nvm.sh 
+[[ -s "$HOME/nvm/nvm.sh" ]] && . "$HOME/nvm/nvm.sh" 
