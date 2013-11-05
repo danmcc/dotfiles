@@ -5,3 +5,5 @@
 	excludesfile = /home/dmccormick/.gitignore_global
 [color]
 	ui = true
+[push]
+	default = simple
