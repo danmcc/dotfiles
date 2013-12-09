@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp .bashrc .gitignore_global .irbrc .sqliterc .tmux.conf .vimrc .zshrc .screenrc ~/
