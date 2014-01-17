@@ -18,7 +18,8 @@ export CVSROOT=/data/export/code/cvsroot
 export PATH=/sbin:/usr/sbin:/usr/local/sbin:$PATH:/home/dan/bin:/home/dan/.gem/ruby/1.8/bin
 export LANG=en_US.UTF-8
 export PERL5LIB=/home/dmccormick/code/shutterstock-mason/lib:/home/dmccormick/code/shutterstock-mason/t/lib:/opt/local-lib/shutterstock/lib/perl5:/opt/shutterstock-perl/usr/lib/perl5
-export LS_COLORS="ow=01;91:di=01;91"
+export LS_COLORS="ow=01;91:di=01;91" # linux?
+export LSCOLORS=ExFxCxDxBxegedabagacad # mac
 export EDITOR=vim
 export HISTTIMEFORMAT='%F %T '
 export REPO_PATH=/home/dmccormick/code/shutterstock-mason
