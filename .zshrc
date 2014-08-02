@@ -43,3 +43,7 @@ alias ll="ls -lh --color=auto"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 [[ -s "$HOME/nvm/nvm.sh" ]] && . "$HOME/nvm/nvm.sh" 
+
+export EDITOR=vim
+
+alias tmux="TERM=screen-256color-bce tmux"
