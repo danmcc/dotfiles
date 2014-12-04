@@ -1,8 +1,19 @@
 set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'Valloric/MatchTagAlways'
+
+call vundle#end()
+filetype plugin indent on
 
 " sane editing options
-set tabstop=4                  " number of spaces that a <Tab> in the file counts for
-set shiftwidth=4               " number of spaces to use for each step of (auto)indent
+
+:set expandtab
+:set tabstop=2
+:set shiftwidth=2
 set copyindent                 " copy indenting style of the line above
 "set whichwrap=b,s,h,l,<,>,[,]  " allow the cursor to wrap on anything
 set backspace=2                " fully enable backspace to delete anything in insert mode
@@ -95,6 +106,7 @@ function ToggleComment()
 endfunction
 map <silent> <c-x> :call ToggleComment()<cr>j
 map <silent> <c-p> :VCSVimDiff master<cr>
+map <silent> <c-n> :NERDTreeTabsToggle<cr>
 
 " remap tab to autocomplete words when not at the beginning of a line
 function InsertTabWrapper()
@@ -139,6 +151,9 @@ function HighlightWhitespace()
 	endif
 endfunction
 
+exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+set list
+
 " highlight long lines - see http://vim.wikia.com/wiki/Highlight_long_lines
 "highlight LongLines ctermbg=lightgrey guibg=lightgrey
 "autocmd FileType perl,mason 2match LongLines /^.\{160,\}$/
@@ -152,3 +167,12 @@ source $VIMRUNTIME/macros/matchit.vim    " allow % to match anything that filety
 "
 autocmd BufEnter * :syntax sync fromstart
 "set mouse=a
+" this lets Rpreview work in rails.vim
+command -bar -nargs=1 OpenURL :!open <args>
+
+execute pathogen#infect()
+
+au BufNewFile,BufRead *.ejs set filetype=html
+
+set undofile
+set undodir=/Users/dmccormick/.vimundo/
